@@ -1,0 +1,13 @@
+@import 'partials/navbar';
+// @import 'partials/fonts';
+
+* {
+  box-sizing: border-box;
+
+  ul {
+    list-style: none;
+  }
+  max-width: 1440px;
+  margin: 0 auto;
+  // font-family: $font-stack;
+}
