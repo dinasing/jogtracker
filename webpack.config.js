@@ -20,14 +20,17 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(ttf|eot|svg|woff|png)$/,
-        loader: 'file-loader',
-        options: {
-          name: '[path][name].[ext]?[hash]',
-          outputPath: 'images/',
-          publicPath: './dist/images',
-        },
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'svg-url-loader',
+            options: {
+              limit: 10000,
+            },
+          },
+        ],
       },
+
       {
         enforce: 'pre',
         test: /\.(js|jsx)$/,
@@ -39,12 +42,13 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(png|svg|jpg|gif)$/,
+        test: /\.(ttf|eot|woff|png)(\?v=\d+\.\d+\.\d+)?$/,
         use: [
           {
-            loader: 'url-loader',
+            loader: 'file-loader',
             options: {
-              limit: 8192,
+              name: '[name].[ext]',
+              outputPath: 'fonts/',
             },
           },
         ],
