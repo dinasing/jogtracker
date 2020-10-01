@@ -1,0 +1,15 @@
+@import '~font-awesome/css/font-awesome.css';
+
+@font-face {
+  font-family: 'SFUIText';
+  src: url('../../assets/fonts/SFUIText-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SFUIText';
+  src: url('../../assets/fonts/SFUIText-Bold.tff') format('truetype');
+  font-weight: bold;
+}
+
+$font-stack: 'SFUIText', sans-serif;
