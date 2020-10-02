@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import filter from '../../assets/images/filter.svg';
 
@@ -15,18 +16,24 @@ export default class NavBar extends Component {
         {isAuthenticated ? (
           <ul>
             <li>
-              <a href="/#">jogs</a>
+              <NavLink activeClassName="navbar__link-active" to="/jogs">
+                jogs
+              </NavLink>
             </li>
             <li>
-              <a href="/info">info</a>
+              <NavLink activeClassName="navbar__link-active" to="/info">
+                info
+              </NavLink>
             </li>
             <li>
-              <a href="/contacts">contact us</a>
+              <NavLink activeClassName="navbar__link-active" to="/contacts">
+                contact us
+              </NavLink>
             </li>
             <li>
-              <a href="/filter">
+              <NavLink activeClassName="navbar__link-active" to="/filter">
                 <img src={filter} alt="filter" className="navbar__filter" />
-              </a>
+              </NavLink>
             </li>
           </ul>
         ) : null}

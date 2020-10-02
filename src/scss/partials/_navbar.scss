@@ -41,11 +41,9 @@
     padding: 0;
   }
 
-  a:hover {
-    color: #e990f9;
-  }
-
-  a:active {
+  a:hover,
+  a:active,
+  .navbar__link-active {
     text-decoration: underline;
   }
 
