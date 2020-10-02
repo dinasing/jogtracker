@@ -1,5 +1,5 @@
 @import 'partials/navbar';
-// @import 'partials/fonts';
+@import 'partials/fonts';
 
 * {
   box-sizing: border-box;
@@ -9,5 +9,5 @@
   }
   max-width: 1440px;
   margin: 0 auto;
-  // font-family: $font-stack;
+  font-family: $font-stack;
 }
