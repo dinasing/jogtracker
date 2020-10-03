@@ -7,11 +7,16 @@
 
 * {
   box-sizing: border-box;
-
-  ul {
-    list-style: none;
-  }
   max-width: 1440px;
   margin: 0 auto;
   font-family: $font-stack;
+}
+
+ul {
+  list-style: none;
+}
+
+input:focus,
+button:focus {
+  outline: none;
 }
