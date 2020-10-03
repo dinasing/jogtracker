@@ -8,8 +8,12 @@
   font-family: sans-serif;
   font-size: 14px;
 
-  &__logo {
+  &__home_link {
+    display: block;
     margin-left: 37px;
+  }
+
+  &__logo {
     width: 147px;
     height: 56px;
   }
@@ -49,7 +53,7 @@
     border-bottom: 2px solid #ffffff;
   }
 
-  .navbar__filter-list-item {
+  .navbar__filter_list_item {
     width: 39px;
     height: 39px;
   }

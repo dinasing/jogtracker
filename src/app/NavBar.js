@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 // import filter from '../../assets/images/filter.svg';
 
@@ -12,7 +12,9 @@ export default class NavBar extends Component {
     const { isAuthenticated } = this.state;
     return (
       <header className="navbar">
-        <img className="navbar__logo" src={logo} alt="logobear" />
+        <Link className="navbar__home_link" to="/">
+          <img className="navbar__logo" src={logo} alt="logobear" />
+        </Link>
         {isAuthenticated ? (
           <ul>
             <li>
@@ -34,7 +36,7 @@ export default class NavBar extends Component {
                 contact us
               </NavLink>
             </li>
-            <li className="navbar__filter-list-item">
+            <li className="navbar__filter_list_item">
               <NavLink
                 activeClassName="navbar__filter-active"
                 className="navbar__filter"
