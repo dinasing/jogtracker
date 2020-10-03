@@ -33,23 +33,40 @@
     margin-right: 36px;
   }
 
-  a {
+  &__link {
     text-decoration: none;
     text-transform: uppercase;
     color: #ffffff;
     margin: 0;
     padding: 0;
+    line-height: 24px;
+    border-bottom: 2px solid transparent;
   }
 
-  a:hover,
-  a:active,
+  &__link:hover,
+  &__link:active,
   .navbar__link-active {
-    text-decoration: underline;
+    border-bottom: 2px solid #ffffff;
   }
 
+  .navbar__filter-list-item {
+    width: 39px;
+    height: 39px;
+  }
   &__filter {
     width: 26px;
     height: 26px;
     object-fit: contain;
+    background-image: url('../../assets/images/filter.svg');
+  }
+
+  .navbar__filter-active {
+    background-image: url('../../assets/images/filter-active.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 2px solid #62aa14;
+    border-radius: 7px;
+    width: 39px;
+    height: 39px;
   }
 }

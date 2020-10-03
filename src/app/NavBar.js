@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
-import filter from '../../assets/images/filter.svg';
+// import filter from '../../assets/images/filter.svg';
 
 export default class NavBar extends Component {
   state = {
@@ -16,24 +16,30 @@ export default class NavBar extends Component {
         {isAuthenticated ? (
           <ul>
             <li>
-              <NavLink activeClassName="navbar__link-active" to="/jogs">
+              <NavLink className="navbar__link" activeClassName="navbar__link-active" to="/jogs">
                 jogs
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="navbar__link-active" to="/info">
+              <NavLink className="navbar__link" activeClassName="navbar__link-active" to="/info">
                 info
               </NavLink>
             </li>
             <li>
-              <NavLink activeClassName="navbar__link-active" to="/contacts">
+              <NavLink
+                className="navbar__link"
+                activeClassName="navbar__link-active"
+                to="/contacts"
+              >
                 contact us
               </NavLink>
             </li>
-            <li>
-              <NavLink activeClassName="navbar__link-active" to="/filter">
-                <img src={filter} alt="filter" className="navbar__filter" />
-              </NavLink>
+            <li className="navbar__filter-list-item">
+              <NavLink
+                activeClassName="navbar__filter-active"
+                className="navbar__filter"
+                to="/filter"
+              />
             </li>
           </ul>
         ) : null}
