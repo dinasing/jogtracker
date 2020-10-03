@@ -20,6 +20,14 @@
     color: #ffffff;
     align-self: flex-end;
   }
+
+  &__button:hover {
+    background-color: #fff;
+    color: #e990f9;
+  }
+  &__button:focus {
+    outline: none;
+  }
 }
 
 .wrapper {
