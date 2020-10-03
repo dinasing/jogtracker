@@ -42,7 +42,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(ttf|eot|woff|png)(\?v=\d+\.\d+\.\d+)?$/,
+        test: /\.(woff(2)?|eot|ttf)/,
         use: [
           {
             loader: 'file-loader',
