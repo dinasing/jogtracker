@@ -1,10 +1,12 @@
 import React from 'react';
-// add this component to jogs list page with check for jogs
+
 export default function NothingPage() {
   return (
-    <div>
-      <p> Nothing is there</p>
-      <button>Create your first jog</button>
+    <div className="nothing_page">
+      <p className="nothing_page__text"> Nothing is there</p>
+      <button className="nothing_page__button" type="button">
+        Create your jog first
+      </button>
     </div>
   );
 }

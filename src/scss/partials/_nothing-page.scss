@@ -1,0 +1,33 @@
+.nothing_page {
+  height: 1024px;
+  background-image: url('../../assets/images/sad-rounded-square-emoticon.svg');
+  background-repeat: no-repeat;
+  background-position: 647px 242px;
+  display: flex;
+  flex-direction: column;
+
+  &__text {
+    padding-top: 438px;
+    width: 182px;
+    font-size: 24px;
+    line-height: 1.21;
+    color: #979797;
+  }
+
+  &__button {
+    margin-top: 171px;
+    width: 249px;
+    height: 60px;
+    border-radius: 36px;
+    border: solid 3px #e990f9;
+    font-size: 18px;
+    font-weight: bold;
+    color: #e990f9;
+    background-color: transparent;
+  }
+
+  &__button:hover {
+    background-color: #e990f9;
+    color: #ffffff;
+  }
+}
