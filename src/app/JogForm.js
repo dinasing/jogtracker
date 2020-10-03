@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import cancelIcon from '../../assets/images/cancel.svg';
 
 export default class JogForm extends Component {
@@ -6,7 +7,9 @@ export default class JogForm extends Component {
     return (
       <div className="modal">
         <div className="modal__cancel">
-          <img src={cancelIcon} alt="cancel" />
+          <Link to="jogs">
+            <img src={cancelIcon} alt="cancel" />
+          </Link>
         </div>
 
         <form className="form">
