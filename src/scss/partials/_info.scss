@@ -1,0 +1,22 @@
+.info {
+  margin: 0 auto;
+  text-align: left;
+
+  max-width: 614px;
+
+  &__heading {
+    margin-top: 84px;
+    text-transform: uppercase;
+    color: #7ed321;
+    font-size: 36px;
+    font-weight: bold;
+  }
+
+  &__basic_text {
+    height: 191px;
+    margin: 15px 0;
+    font-size: 14px;
+    color: #6c6c6c;
+    line-height: 1.71;
+  }
+}
