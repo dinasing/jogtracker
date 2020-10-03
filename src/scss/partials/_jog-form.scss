@@ -1,0 +1,53 @@
+.modal {
+  margin: 118px auto;
+  width: 503px;
+  height: 379px;
+  border-radius: 44px;
+  background-color: #7ed321;
+  color: #000000;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+
+  &__submit {
+    width: 320px;
+    height: 42px;
+    border-radius: 25.2px;
+    border: solid 2px #ffffff;
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 12.6px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 21px;
+  }
+
+  &__submit:hover {
+    background-color: #ffffff;
+    color: #7ed321;
+  }
+}
+.input_group {
+  display: flex;
+  width: 326px;
+  margin-bottom: 25px;
+
+  &__input {
+    align-self: flex-end;
+    width: 236px;
+    height: 31px;
+    border-radius: 7px;
+    border: solid 1px #979797;
+    background-color: #ffffff;
+  }
+
+  &__label {
+    width: 88px;
+    font-size: 16px;
+    text-align: left;
+    line-height: 31px;
+  }
+}
