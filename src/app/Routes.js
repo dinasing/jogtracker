@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
+import Jogs from './Jogs';
 import Login from './Login';
 
 class Routes extends Component {
   render() {
     return (
       <Switch>
+        <Route path="/jogs" component={Jogs} />
         <Route path="*" component={Login} />
-        <Route path="*" component={() => '404 NOT FOUND'} />
       </Switch>
     );
   }
