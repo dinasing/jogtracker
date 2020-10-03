@@ -1,0 +1,30 @@
+.login {
+  background-image: url('../../assets/images/bear-face.svg');
+  background-position: 172px 72px;
+  background-repeat: no-repeat;
+  background-color: #e990f9;
+  border-radius: 44px;
+  width: 503px;
+  height: 379px;
+  display: flex;
+  padding-bottom: 36px;
+
+  &__button {
+    width: 151px;
+    height: 60px;
+    border-radius: 36px;
+    border: solid 3px #ffffff;
+    background-color: transparent;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    align-self: flex-end;
+  }
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  min-height: 701px;
+  align-items: center;
+}
