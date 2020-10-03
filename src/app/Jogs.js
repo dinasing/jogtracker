@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import addIcon from '../../assets/images/addicon.svg';
 
 const jogs = [
   {
@@ -46,6 +47,10 @@ export default class Jogs extends Component {
           {jogs.map(jog => (
             <Jog jog={jog} />
           ))}
+        </div>
+        <div className="new_jog">
+          {' '}
+          <img src={addIcon} alt="add jog" />
         </div>
       </>
     );
