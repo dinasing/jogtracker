@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import addIcon from '../../assets/images/addicon.svg';
 
 const jogs = [
@@ -49,8 +50,9 @@ export default class Jogs extends Component {
           ))}
         </div>
         <div className="new_jog">
-          {' '}
-          <img src={addIcon} alt="add jog" />
+          <Link to="/new-jog">
+            <img src={addIcon} alt="add jog" />
+          </Link>
         </div>
       </>
     );
