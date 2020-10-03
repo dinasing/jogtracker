@@ -55,17 +55,17 @@ export default class Jogs extends Component {
 const Jog = props => {
   const { speed, distance, time, date } = props.jog;
   return (
-    <div className="jogs__jog">
-      <p>{date}</p>
-      <p>
-        <span className="jogs__important_text">Speed:</span> {speed}
+    <article className="jogs__jog">
+      <p className="jogs__date jogs__jog_info_text">{date}</p>
+      <p className="jogs__jog_info_text">
+        <span className="jogs__important_text ">Speed:</span> {speed}
       </p>
-      <p>
-        <span className="jogs__important_text">Distance</span> {distance} km
+      <p className="jogs__jog_info_text">
+        <span className="jogs__important_text">Distance:</span> {distance} km
       </p>
-      <p>
-        <span className="jogs__important_text">Time</span> {time} min
+      <p className="jogs__jog_info_text">
+        <span className="jogs__important_text">Time:</span> {time} min
       </p>
-    </div>
+    </article>
   );
 };

@@ -1,10 +1,9 @@
 .date_filters {
   display: flex;
-  max-width: 1440px;
   height: 60px;
   background-color: #eaeaea;
   font-size: 13px;
-  color: #979797;
+  color: #747474;
   align-items: center;
   justify-content: space-between;
   padding: 0 530px;
@@ -24,5 +23,35 @@
   }
   &__input:focus {
     outline: none;
+  }
+}
+
+.jogs {
+  display: flex;
+  flex-direction: column;
+
+  &__jog {
+    margin-top: 53px;
+    background-image: url('../../assets/images/jogicon.svg');
+    background-repeat: no-repeat;
+    height: 122px;
+    width: 242px;
+    color: #6c6c6c;
+    font-size: 14px;
+    padding-left: 132px;
+  }
+
+  &__jog_info_text {
+    margin-bottom: 9px;
+  }
+
+  &__date {
+    color: #948a8a;
+    font-weight: normal;
+  }
+
+  &__important_text {
+    color: #000000;
+    font-weight: bold;
   }
 }
