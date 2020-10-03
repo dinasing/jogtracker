@@ -1,9 +1,14 @@
 import React, { Component } from 'react';
+import cancelIcon from '../../assets/images/cancel.svg';
 
 export default class JogForm extends Component {
   render() {
     return (
       <div className="modal">
+        <div className="modal__cancel">
+          <img src={cancelIcon} alt="cancel" />
+        </div>
+
         <form className="form">
           <p className="input_group">
             <label className="input_group__label">Distance</label>
