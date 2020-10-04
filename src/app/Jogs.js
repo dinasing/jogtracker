@@ -8,6 +8,8 @@ import NothingPage from './NothingPage';
 export default class Jogs extends Component {
   state = {
     jogs: [],
+    fromDate: 0,
+    toDate: new Date().getTime() / 1000,
   };
 
   async componentDidMount() {
@@ -15,26 +17,37 @@ export default class Jogs extends Component {
     this.setState({ jogs });
   }
 
+  handleChange = e => {
+    this.setState({
+      [e.target.id]: new Date(e.target.value).getTime() / 1000,
+    });
+  };
   render() {
-    const { jogs } = this.state;
+    const { jogs, fromDate, toDate } = this.state;
     if (!jogs.length) {
       return <NothingPage />;
     }
+
+    const filteredJogs = jogs.filter(jog => {
+      const date = jog.date;
+      return date >= fromDate && date <= toDate;
+    });
+
     return (
       <>
         <div className="date_filters">
           <div className="date_filters__wrapper">
             <label>Date from </label>
-            <input className="date_filters__input" id="from" />
+            <input className="date_filters__input" id="fromDate" onChange={this.handleChange} />
           </div>
 
           <div className="date_filters__wrapper">
             <label>Date to</label>
-            <input className="date_filters__input" id="to" />
+            <input className="date_filters__input" id="toDate" onChange={this.handleChange} />
           </div>
         </div>
         <div className="jogs">
-          {jogs.map((jog, index) => (
+          {filteredJogs.map((jog, index) => (
             <Jog jog={jog} key={`jog ${index} ${jog.date} ${jog.time}`} />
           ))}
         </div>
@@ -54,7 +67,7 @@ const Jog = props => {
   return (
     <article className="jogs__jog">
       <p className="jogs__date jogs__jog_info_text">
-        {moment(new Date(date * 1e3)).format('DD.MM.YYYY')}
+        {moment(new Date(date * 1e3)).format('MM.DD.YYYY')}
       </p>
       <p className="jogs__jog_info_text">
         <span className="jogs__important_text ">Speed:</span> {speed.toPrecision(2)}
