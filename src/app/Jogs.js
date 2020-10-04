@@ -34,8 +34,8 @@ export default class Jogs extends Component {
           </div>
         </div>
         <div className="jogs">
-          {jogs.map(jog => (
-            <Jog jog={jog} />
+          {jogs.map((jog, index) => (
+            <Jog jog={jog} key={`jog ${index} ${jog.date} ${jog.time}`} />
           ))}
         </div>
         <div className="new_jog">
