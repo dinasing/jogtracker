@@ -47,7 +47,7 @@ export default class JogForm extends Component {
             <label className="input_group__label">Time</label>
             <input
               className="input_group__input"
-              type="time"
+              type="number"
               id="time"
               onChange={this.handleChange}
             />
