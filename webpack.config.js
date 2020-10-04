@@ -57,10 +57,11 @@ module.exports = {
   },
 
   devServer: {
+    historyApiFallback: true,
     inline: true,
     contentBase: './public',
     port: 8080,
-    proxy: { '/**': { target: 'http://localhost:3000', secure: false } },
+    hot: true,
   },
   plugins: [
     new HtmlWebpackPlugin({
