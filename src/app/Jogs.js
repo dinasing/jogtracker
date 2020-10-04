@@ -53,7 +53,9 @@ const Jog = props => {
   const speed = time ? distance / time : 0;
   return (
     <article className="jogs__jog">
-      <p className="jogs__date jogs__jog_info_text">{moment(date).format('DD.MM.YYYY')}</p>
+      <p className="jogs__date jogs__jog_info_text">
+        {moment(new Date(date * 1e3)).format('DD.MM.YYYY')}
+      </p>
       <p className="jogs__jog_info_text">
         <span className="jogs__important_text ">Speed:</span> {speed.toPrecision(2)}
       </p>
