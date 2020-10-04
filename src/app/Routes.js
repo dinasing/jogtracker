@@ -21,7 +21,11 @@ class Routes extends Component {
         />
         <ProtectedRoute isAuthenticated={isAuthenticated} exact path="/info" component={Info} />
         <ProtectedRoute isAuthenticated={isAuthenticated} exact path="/jogs" component={Jogs} />
-        <Route path="/" render={() => (isAuthenticated ? <Redirect to="/jogs" /> : <Login />)} />
+        <Route
+          exact
+          path="/"
+          render={() => (isAuthenticated ? <Redirect to="/jogs" /> : <Login />)}
+        />
 
         <Route isAuthenticated={isAuthenticated} path="/*" component={NothingPage} />
       </Switch>
