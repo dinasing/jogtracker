@@ -28,6 +28,8 @@ export const getToken = uuid => {
     .then(response => {
       if (response.data.response.access_token) {
         localStorage.setItem('token', response.data.response.access_token);
+
+        window.location.href = '/jogs';
       }
     })
     .catch(() => {
