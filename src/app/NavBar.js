@@ -3,12 +3,9 @@ import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 
 export default class NavBar extends Component {
-  state = {
-    isAuthenticated: true,
-  };
-
   render() {
-    const { isAuthenticated } = this.state;
+    const { isAuthenticated } = this.props;
+
     return (
       <header className="navbar">
         <Link className="navbar__home_link" to="/">
