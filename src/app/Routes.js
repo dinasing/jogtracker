@@ -9,7 +9,7 @@ import { ProtectedRoute } from './ProtectedRoute';
 
 class Routes extends Component {
   render() {
-    const { isAuthenticated } = this.props;
+    const { isAuthenticated, areFiltersOpen } = this.props;
 
     return (
       <Switch>
@@ -20,7 +20,13 @@ class Routes extends Component {
           component={JogForm}
         />
         <ProtectedRoute isAuthenticated={isAuthenticated} exact path="/info" component={Info} />
-        <ProtectedRoute isAuthenticated={isAuthenticated} exact path="/jogs" component={Jogs} />
+        <ProtectedRoute
+          isAuthenticated={isAuthenticated}
+          areFiltersOpen={areFiltersOpen}
+          exact
+          path="/jogs"
+          component={Jogs}
+        />
         <Route
           exact
           path="/"
