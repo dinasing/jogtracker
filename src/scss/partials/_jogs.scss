@@ -5,8 +5,9 @@
   font-size: 13px;
   color: #747474;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
-  padding: 0 530px;
+  padding: 0 36.7%;
 
   &__wrapper {
     max-width: 180px;
@@ -21,6 +22,7 @@
     border: solid 1px #979797;
     background-color: #ffffff;
   }
+
   &-hidden {
     display: none;
   }
