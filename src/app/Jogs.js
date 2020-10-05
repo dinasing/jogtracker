@@ -22,8 +22,11 @@ export default class Jogs extends Component {
       [e.target.id]: new Date(e.target.value).getTime() / 1000,
     });
   };
+
   render() {
     const { jogs, fromDate, toDate } = this.state;
+    const { areFiltersOpen } = this.props;
+
     if (!jogs.length) {
       return <NothingPage />;
     }
@@ -35,7 +38,7 @@ export default class Jogs extends Component {
 
     return (
       <>
-        <div className="date_filters">
+        <div className={areFiltersOpen ? 'date_filters' : 'date_filters-hidden'}>
           <div className="date_filters__wrapper">
             <label>Date from </label>
             <input className="date_filters__input" id="fromDate" onChange={this.handleChange} />

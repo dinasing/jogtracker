@@ -9,6 +9,7 @@ import { isTokenValid } from './auth';
 class App extends React.Component {
   state = {
     isAuthenticated: false,
+    areFiltersOpen: false,
   };
 
   componentDidMount() {
@@ -24,12 +25,23 @@ class App extends React.Component {
     this.setState({ isAuthenticated });
   };
 
+  toggleFilters = () => {
+    this.setState(prevState => ({
+      areFiltersOpen: !prevState.areFiltersOpen,
+    }));
+  };
+
   render() {
-    const { isAuthenticated } = this.state;
+    const { isAuthenticated, areFiltersOpen } = this.state;
+
     return (
       <BrowserRouter>
-        <NavBar isAuthenticated={isAuthenticated} />
-        <Routes isAuthenticated={isAuthenticated} />
+        <NavBar
+          isAuthenticated={isAuthenticated}
+          areFiltersOpen={areFiltersOpen}
+          toggleFilters={this.toggleFilters}
+        />
+        <Routes isAuthenticated={isAuthenticated} areFiltersOpen={areFiltersOpen} />
       </BrowserRouter>
     );
   }
