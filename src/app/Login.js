@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from 'react-router-dom';
 import { getToken } from './auth';
 
-const { uuid } = process.env;
+const uuid = 'hello';
 
 export default class Login extends Component {
   handleLogin = () => {
