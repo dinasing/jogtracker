@@ -11,6 +11,6 @@ app.get('*', (request, response) => {
   response.sendFile(path.join(publicPath, 'index.html'));
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
   console.log('Server is running on port ' + port);
 });
