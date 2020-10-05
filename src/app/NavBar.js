@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
+import filter from '../../assets/images/filter.svg';
+import filterActive from '../../assets/images/filter-active.svg';
 
 export default class NavBar extends Component {
   render() {
-    const { isAuthenticated } = this.props;
+    const { isAuthenticated, areFiltersOpen } = this.props;
 
     return (
       <header className="navbar">
@@ -33,10 +35,10 @@ export default class NavBar extends Component {
               </NavLink>
             </li>
             <li className="navbar__filter_list_item">
-              <NavLink
-                activeClassName="navbar__filter-active"
-                className="navbar__filter"
-                to="/filter"
+              <input
+                type="image"
+                onClick={this.props.toggleFilters}
+                src={areFiltersOpen ? filterActive : filter}
               />
             </li>
           </ul>
