@@ -26,11 +26,28 @@
   &-hidden {
     display: none;
   }
+
+  @media screen and (max-width: 376px) {
+    height: 60px;
+
+    padding: 0 8%;
+    &__input {
+      width: 72px;
+    }
+    &__wrapper {
+      width: 150px;
+      margin: 0;
+    }
+  }
 }
 
 .jogs {
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 376px) {
+    justify-content: center;
+  }
 
   &__jog {
     margin-top: 53px;
@@ -41,6 +58,24 @@
     color: #6c6c6c;
     font-size: 14px;
     padding-left: 132px;
+
+    @media screen and (max-width: 376px) {
+      .jogs__jog_text {
+        margin: 0;
+        padding: 0;
+        align-self: center;
+        width: 50%;
+      }
+
+      display: flex;
+      justify-content: flex-end;
+      padding: 0;
+      margin: 0;
+      height: 187.4px;
+      border-bottom: 2px solid #eaeaea;
+      width: 100%;
+      background-position: 25% 43%;
+    }
   }
 
   &__jog_info_text {
@@ -61,4 +96,8 @@
 .new_jog {
   margin: 47px 40px 40px 0;
   text-align: right;
+
+  @media screen and (max-width: 376px) {
+    margin: 73px 30px 30px 0;
+  }
 }
