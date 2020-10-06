@@ -25,6 +25,19 @@
     background-color: #fff;
     color: #e990f9;
   }
+
+  @media screen and (max-width: 375px) and (max-height: 594px) {
+    background-image: url('../../assets/images/bearface.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: #ffffff;
+
+    &__button {
+      align-self: center;
+      color: #e990f9;
+      border: solid 3px #e990f9;
+    }
+  }
 }
 
 .wrapper {
@@ -32,4 +45,8 @@
   justify-content: center;
   min-height: 701px;
   align-items: center;
+
+  @media screen and (max-width: 375px) and (max-height: 594px) {
+    min-height: 594px;
+  }
 }
