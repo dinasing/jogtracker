@@ -28,8 +28,8 @@ export default class NavBar extends Component {
           <img className="navbar__logo" src={isMenuOpen ? logoMobile : logo} alt="logobear" />
         </Link>
         {isAuthenticated ? (
-          <div className="navbar__links">
-            <ul>
+          <div className="navbar__nav">
+            <ul className={isMenuOpen ? 'navbar__links-open' : ''}>
               <li>
                 <NavLink className="navbar__link" activeClassName="navbar__link-active" to="/jogs">
                   jogs
