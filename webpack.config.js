@@ -35,7 +35,7 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'sass-loader'],
       },
       {
-        test: /\.(woff(2)?|eot|ttf)/,
+        test: /\.(woff(2)?|eot|ttf|png)/,
         use: [
           {
             loader: 'file-loader',
