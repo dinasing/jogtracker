@@ -18,14 +18,21 @@
     @media screen and (max-width: 375px) {
       background-color: #ffffff;
       justify-content: space-evenly;
-      height: 670px;
+      height: 667px;
+      align-items: flex-start;
+      padding-top: 16px;
 
       .navbar__links-open {
         order: 3;
         flex-direction: column;
         display: flex;
-        height: 100%;
+        justify-content: space-between;
+        height: 150px;
         width: 100%;
+        position: absolute;
+        top: 185px;
+        left: 0;
+        align-items: center;
       }
     }
   }
@@ -84,6 +91,7 @@
     @media screen and (max-width: 375px) {
       font-size: 25px;
       color: #000000;
+      font-weight: bold;
     }
   }
 
@@ -95,6 +103,7 @@
     @media screen and (max-width: 375px) {
       border: none;
       color: #7ed321;
+      font-weight: bold;
     }
   }
 
