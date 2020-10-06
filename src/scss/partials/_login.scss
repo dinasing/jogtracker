@@ -1,6 +1,6 @@
 .login {
   background-image: url('../../assets/images/bear-face.svg');
-  background-position: 172px 72px;
+  background-position: 50% 72px;
   background-repeat: no-repeat;
   background-color: #e990f9;
   border-radius: 44px;
@@ -24,6 +24,20 @@
   &__button:hover {
     background-color: #fff;
     color: #e990f9;
+  }
+
+  @media screen and (max-width: 768px) {
+    background-image: url('../../assets/images/bearface.png');
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    height: 624px;
+    padding-bottom: 38%;
+
+    &__button {
+      align-self: flex-end;
+      color: #e990f9;
+      border: solid 3px #e990f9;
+    }
   }
 
   @media screen and (max-width: 375px) {
