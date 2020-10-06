@@ -26,14 +26,16 @@
     color: #e990f9;
   }
 
-  @media screen and (max-width: 375px) and (max-height: 594px) {
+  @media screen and (max-width: 375px) {
     background-image: url('../../assets/images/bearface.png');
     background-repeat: no-repeat;
-    background-position: top;
+    background-position: center 30%;
     background-color: #ffffff;
+    height: 590px;
+    padding-bottom: 38%;
 
     &__button {
-      align-self: center;
+      align-self: flex-end;
       color: #e990f9;
       border: solid 3px #e990f9;
     }
@@ -46,7 +48,7 @@
   min-height: 701px;
   align-items: center;
 
-  @media screen and (max-width: 375px) and (max-height: 594px) {
+  @media screen and (max-width: 375px) {
     min-height: 594px;
   }
 }

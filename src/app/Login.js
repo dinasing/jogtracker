@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
 import { getToken } from './auth';
 
 const uuid = 'hello';
