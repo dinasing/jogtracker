@@ -9,6 +9,18 @@
   &__cancel {
     padding: 27px 27px 0 0;
     text-align: right;
+
+    @media screen and (max-width: 768px) {
+      padding: 5px 21px 0 0;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 81.6%;
+    height: 64.4%;
+    padding-top: 11px;
+    border-radius: 29px;
+    margin-top: 83px;
   }
 }
 
@@ -16,6 +28,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 45px;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
 
   &__submit {
     width: 320px;
@@ -28,6 +45,11 @@
     font-weight: bold;
     text-align: center;
     margin-top: 21px;
+
+    @media screen and (max-width: 768px) {
+      width: 78%;
+      margin-top: 11px;
+    }
   }
 
   &__submit:hover {
@@ -35,10 +57,18 @@
     color: #7ed321;
   }
 }
+
 .input_group {
   display: flex;
   width: 326px;
   margin-bottom: 25px;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    font-size: 13px;
+    margin-bottom: 26px;
+    width: 100%;
+  }
 
   &__input {
     align-self: flex-end;
@@ -47,6 +77,12 @@
     border-radius: 7px;
     border: solid 1px #979797;
     background-color: #ffffff;
+
+    @media screen and (max-width: 768px) {
+      width: 76%;
+      line-height: 1;
+      font-size: 13px;
+    }
   }
 
   &__label {
@@ -54,5 +90,12 @@
     font-size: 16px;
     text-align: left;
     line-height: 31px;
+
+    @media screen and (max-width: 768px) {
+      width: 76%;
+      line-height: 1;
+      font-size: 13px;
+      margin-bottom: 5px;
+    }
   }
 }
